@@ -1,0 +1,32 @@
+<%-include('partials/header')%>
+<link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+<div class="container">
+  <div class="card login-container">
+    <div class="logtxt">
+      <h1 class="loginheading">Login</h1>
+      <br />
+      <h6 class="logintext">to continue</h6>
+    </div>
+    <center><hr></center>
+    <div class="login-form">
+      <form action="/login" method="POST">
+        <div class="form-group">
+          <label for="email" class="label">Email:</label>
+          <br>
+          <input type="email" name="email" placeholder="Enter Email" id="email">
+        </div>
+        <div class="form-group">
+          <label for="password" class="label">Password:</label>
+          <br>
+          <input type="password" name="password" id="password" placeholder="Enter Password">
+        </div>
+        <button>Login</button>
+      </form>
+      <br>
+      <a href="/forgot">Forgot Password?</a><br>
+      <a href="/register">New User? Register</a>
+    </div>
+  </div>
+</div>
+<%-include('partials/footer')%>

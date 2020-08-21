@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #006a71;
+  color: #d33b3b;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.login-container {
+  text-align: center;
+  top: 150px;
+  background-color: #ffffdd;
+  padding: 10px;
+  color: #222831;
+  margin: auto;
+  width: 500px;
+
+}
+
+.logtxt{
+  line-height: 1px;
+}
+
+hr {
+  margin: 7px auto;
+  width: 50%;
+  color: #eeeeee;
+}
+
+.loginheading{
+  font-family: 'Racing Sans One', cursive;
+}
+
+.label {
+  text-align: left !important;
+}
+
+a {
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input[type=email], input[type=password] {
+  width: 65%;
+  outline: none;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+input[type=email]:focus, input[type=password]:focus {
+  border: 2px solid #73729c;
+  padding: 3px;
+}
+
+.type-option {
+  margin: auto 10px;
+  display: inline;
+}
+
+button{
+  margin-top: 8px;
+  padding: 3px;
+  border-radius: 10%;
+  background-color: #006a71;
+  color: #ffffdd;
+}
