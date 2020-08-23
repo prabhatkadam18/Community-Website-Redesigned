@@ -19,18 +19,7 @@ app.use(session({secret: process.env.SESSION_SECRET,
 }));
 //app.use(morgan('tiny'));
 
-function isAuthenticated(req, res, next){
-  if(req.session.user){
-    next();
-  } else {
-    res.redirect('/');
-  }
-}
-
-app.use('/user', isAuthenticated);
-
 const saltRounds = 5;
-
 
 mongoose.connect('mongodb://localhost:27017/' + process.env.DATABASE_NAME, {useNewUrlParser: true, useUnifiedTopology: true} ,(err)=>{
   if(err){
@@ -75,6 +64,16 @@ const requestSchema = new mongoose.Schema({
 const User = mongoose.model('Users', userSchema);
 const Community = mongoose.model('Communities', communitySchema);
 const Request = mongoose.model('Request', requestSchema);
+
+function isAuthenticated(req, res, next){
+  if(req.session.user){
+    next();
+  } else {
+    res.redirect('/');
+  }
+}
+
+// app.use('/user', isAuthenticated);
 
 app.get('/', (req, res) => {
   res.render('login');
@@ -136,7 +135,7 @@ app.post('/register', (req, res)=>{
 });
 
 app.get('/user', (req, res)=>{
-  res.send("User");
+  res.render('user')
 })
 
 // app.get('/test', (req, res)=>{

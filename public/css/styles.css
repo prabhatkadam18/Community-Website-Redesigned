@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #006a71;
+  background-color: #f4f4f4;
   color: #d33b3b;
   font-family: 'Montserrat', sans-serif;
 }
@@ -70,4 +70,17 @@ button{
   border-radius: 10%;
   background-color: #006a71;
   color: #ffffdd;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+.body-wrapper {
+  margin-top: 60px;
+}
+
+.header-nav {
+  box-shadow: 0px 5px 10px #888;
 }
